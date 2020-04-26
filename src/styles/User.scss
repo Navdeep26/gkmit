@@ -1,0 +1,33 @@
+.userWrapper {
+  .addUserButton{
+    position: fixed;
+    bottom: 15px;
+    right: 29px;
+    border: 2px solid green;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: grid;
+    background: green;
+    color: white;
+    cursor: pointer;
+    .addIcon {
+      font-size: 25px;
+      margin: auto;
+    }
+  } 
+  .action {
+    font-size: 10px;
+    cursor: pointer;
+    .edit {
+      color: #e4e400;
+      padding: 4px;
+    }
+    .delete {
+      color: red;
+    }
+    i {
+      font-size: 15px;
+    }
+  }
+}

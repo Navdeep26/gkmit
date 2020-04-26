@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import {BrowserRouter as Router} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {store} from './helpers/store';
+import  ApplicationRoute  from "./routes";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; 
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+import'../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <Router>
+      <ApplicationRoute />
+    </Router>
+  </Provider>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
